@@ -24,7 +24,7 @@ h4 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 a {
@@ -41,10 +41,10 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    /* width: 100%; */
     background-color: var(--pale-blue);
 }
 
+/* Positions the title at top left of screen */
 header .page-title {
     display: flex;
     justify-content: start;
@@ -52,8 +52,10 @@ header .page-title {
     padding-left: 20px;
     padding-right: 20px;
     margin-right: 10px;
+    color: var(--dark-blue);
 }
 
+/* Positions nav bar in top right of screen */
 nav {
     display: flex;
     justify-content: end;
@@ -64,30 +66,53 @@ nav {
     padding-right: 20px;
 }
 
+/* Sets the positions, font, weight, and colour of nav bar links */
 nav a {
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 24px;
     white-space: nowrap;
     font-family: var(--fonts);
     font-weight: bold;
     color: var(--dark-blue);
 }
 
-
-
+/* Banner for displaying name and avatar */
 .banner {
-    background-color: var(--blue-grey);
-    padding: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: rgb(96, 122, 196);
+    border-style: solid;
+    border-color: var(--dark-blue);
 }
 
-.section-1 {
+/* sets positions and size for avatar */
+#avatar {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 5px;
+    border-style: solid;
+    border-color: var(--dark-blue);
+}
+
+/* displays and positions the writer's name */
+.banner-name {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    position: absolute;
+    padding-left: 20px;
+}
+
+/* Provides a base template for each section to follow */
+.section-base {
     display: flex;
     flex-direction: row;
     margin-left: 5%;
     margin-bottom: 40px;
-    max-width: 800%; /*check this for bug */
+    max-width: 200%; 
 }
 
+/* provides a base template for the side panel of headers */
 .side-panel {
     display: flex;
     text-align: right;
@@ -97,18 +122,21 @@ nav a {
     border-color: var(--blue-grey);
 }
 
+/* limits the size of the box the headers can consume. Prevents spilling over */
 .section-header {
     width: 100px;
 }
+
+/* Positions the about info section on the page */
 .about-info {
     display: inline-flex;
-    margin-left: 10px;
     margin-right: 10%;
     flex: content;
     padding: 20px; 
-    max-width:80%;
+    max-width:70%;
 }
 
+/* Provides basic structure to the card elements on the page */
 .card-section {
     display: flex;
     flex-direction: column;
@@ -119,6 +147,7 @@ nav a {
     max-height: 30%;
 }
 
+/* Sets dimetions and position of the main card */
 .card-main {
     position: relative;
     top: 0px;
@@ -127,6 +156,7 @@ nav a {
     max-height: 100%;
 }
 
+/* sets default dimentions, positions, colours of the card headers relative to each card */
 .card-header {
     position: absolute;
     top: 0px;
@@ -137,18 +167,22 @@ nav a {
     max-width: 70%;
     max-height: 50%;
     padding: 5px;
-    border-left-style: solid;
+    border-style: solid;
     border-color: var(--dark-blue);
+    border-width: 1px;
 }
 
+/* set dimenstions of the main card image to fit within the borders. Sets opacity and transition speed*/
 #card-main-image {
     max-width: 200%;
     max-height: 200%;
     border-style: solid;
     border-color: var(--dark-blue);
-    /* opacity: 0.4; */
+    opacity: 0.4;
+    transition: 0.5s ease;
 }
 
+/* Provides basic formatting for sub card section */
 .sub-cards {
     display: flex;
     justify-content: start;
@@ -157,41 +191,40 @@ nav a {
     max-height: 100%;
 }
 
+
+/* provides basic formatting for cards */
 .card {
     position: relative;
     max-width: 95%;
     height: 100%;
     margin-left: 1%;
     margin-right: 1%;
-    /* margin-top: 5px;
-    margin-left: 2px;
-    margin-right: 2px;
-    margin-bottom: 50px;
-    padding: 20px;
-    border-style: solid;
-    border-color: var(--dark-blue); */
 }
 
+/* set dimenstions of the lesser card images to fit within the borders. Sets opacity and transition speed */
 .card #card-image {
     width: 95%;
     max-height: 100%;
     border-style: solid;
     border-color: var(--dark-blue);
-    /* opacity: 0.4; */
+    opacity: 0.4;
+    transition: 0.5s ease;
 }
 
-
+/* provides font weights and colours to the footer section */
 footer {
     font-family: var(--fonts);
     font-weight: bold;
     color: var(--dark-blue);
 }
 
+/* correctly aligns the footer section next to the header stored under the side-panel class */
 .section-footer {
     display: inline-flex;
     flex-wrap: wrap;
 }
 
+/* provides positioning and formatting for the footer text */
 footer p {
     padding: 10px;
     margin-right: 10%;
@@ -202,10 +235,31 @@ footer p {
     text-decoration: underline;
 }
 
+/* Enables the opacity fade on hover over images */
+#card-main-image:hover {
+    opacity: 1.0;
+}
 
+#card-image:hover {
+    opacity: 1.0;
+}
+
+/* All below modifies text sizes to get smaller at 768px screen size */
 @media (max-width: 768px) {
     .page-title {
         font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-name {
+        font-size: 26px;
     }
 }
 
@@ -226,3 +280,4 @@ footer p {
         font-size: 20px;
     }
 }
+
