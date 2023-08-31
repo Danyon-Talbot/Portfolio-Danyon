@@ -20,7 +20,7 @@ h3 {
 }
 
 h4 {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 p {
@@ -66,9 +66,10 @@ nav {
 
 nav a {
     margin-left: 20px;
+    font-size: 20px;
+    white-space: nowrap;
     font-family: var(--fonts);
     font-weight: bold;
-    /* text-decoration: none; */
     color: var(--dark-blue);
 }
 
@@ -84,7 +85,7 @@ nav a {
     flex-direction: row;
     margin-left: 5%;
     margin-bottom: 40px;
-    max-width: 800%;
+    max-width: 800%; /*check this for bug */
 }
 
 .side-panel {
@@ -148,7 +149,7 @@ nav a {
     /* opacity: 0.4; */
 }
 
-.sub-card {
+.sub-cards {
     display: flex;
     justify-content: start;
     margin-top: 10px;
@@ -181,26 +182,47 @@ nav a {
 
 
 footer {
-  /*filler*/
+    font-family: var(--fonts);
+    font-weight: bold;
+    color: var(--dark-blue);
 }
 
 .section-footer {
     display: inline-flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
 footer p {
     padding: 10px;
     margin-right: 10%;
-    font-family: var(--fonts);
-    font-weight: bold;
-    color: var(--dark-blue);
     white-space: nowrap;
     margin-top: 0px;
+    margin-right: 10px;
+    font-size: 30px;
+    text-decoration: underline;
 }
 
 
-/* @media screen (min-width: 768px){
-    .
-} */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px)  {
+    .section-header {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-header {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    footer p {
+        font-size: 20px;
+    }
+}
