@@ -3,6 +3,7 @@
     --dark-blue: rgb(12, 30, 78); 
     --pale-blue: rgb(200, 229, 247);
     --aliceblue: rgb(240, 248, 255);
+    --blue-grey: rgb(40, 60, 80);
 }
 
 h1 {
@@ -11,6 +12,15 @@ h1 {
 
 h2 {
     font-size: 30px;
+    color: var(--dark-blue);
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
 }
 
 /* sets the background colour */
@@ -33,7 +43,7 @@ header .page-title {
     max-width: 70%;
     padding-left: 20px;
     padding-right: 20px;
-    margin-right: 100px;
+    margin-right: 10px;
 }
 
 nav {
@@ -49,6 +59,16 @@ nav {
 nav a {
     margin-left: 20px;
     font-family: var(--fonts);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+
+
+.banner {
+    background-color: var(--blue-grey);
+    padding: 20px;
 }
 
 .section-1 {
@@ -58,25 +78,27 @@ nav a {
     vertical-align: middle;
     margin-left: 5%;
     margin-bottom: 40px;
+    max-width: 100%;
 }
 
 .side-panel {
-    display: flex;
-    justify-content: flex-start;
+    /* display: block;
+    justify-content: start; */
     text-align: right;
-    margin-right: 20px;
-    color: var(--dark-blue);
-    padding: 20px;
-    border-right-style: groove;
-    border-color: var(--dark-blue);
+    margin-right: 15px;
+    padding: 10px;
+    width: auto;
+    border-right-style: solid;
+    border-color: var(--blue-grey);
 }
 
 .about-info {
     display: inline-flex;
     margin-left: 10px;
+    margin-right: 10%;
     flex: content;
     padding: 20px; 
-    max-width: 50%;
+    max-width:80%;
 }
 
 .card-section {
@@ -84,17 +106,15 @@ nav a {
     justify-content: start;
     flex-wrap: wrap;
     max-width: 80%;
-    padding: 20px;
+    max-height: 50%;
 }
 
 .card-main {
     position: relative;
     display: inline-flex;
-    margin-left: 10px;
-    width: 500px;
-    height: 300px;
-    border-style: groove;
-    border-color: var(--dark-blue);
+    max-width: 100%;
+    max-height: 100%;
+    margin-right: 10%;
 }
 
 .card-header {
@@ -105,22 +125,37 @@ nav a {
     color: var(--dark-blue);
     padding-top: 10px;
     padding-bottom: 10px;
+    max-width: 50%;
+    max-height: 50%;
+    padding: 5px;
 }
 
 .card-main #image-main {
-    width: 500px;
-    height: 300px;
+    max-width: 100%;
+    max-height: auto;
+    border-style: solid;
+    border-color: var(--dark-blue);
+    opacity: 0.2;
 }
 
 .card {
     position: relative;
-    align-self: flex-start;
-    width: 200px;
-    height: 100px;
+    width: 225px;
+    height: 50px;
     margin-top: 5px;
-    margin-left: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
     padding: 20px;
-    border-style: groove;
+    border-style: solid;
     border-color: var(--dark-blue); 
 }
 
+footer {
+    display: inline-flex;
+    justify-content: start;
+}
+
+
+/* @media screen (min-width: 768px){
+    .
+} */
