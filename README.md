@@ -2,7 +2,7 @@
 
 ## Description
 
-In this project, I have built  myself my own personal portfolio from the ground up using the skills I have learnt so far.
+In this project, I have built  myself my own personal portfolio from the ground up using the HTML and advanced CSS skills I have learnt so far.
 
 My Motivation: To continue to prove that I am learning and developing an awesome new set of skills.
 
